@@ -9,17 +9,20 @@
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap">
 
-    <!-- Local Bootstrap CSS -->
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/mycss_web.css"> <!-- Updated path for deployment -->
+    <link rel="stylesheet" href="css/mycss_web.css">
     <link rel="stylesheet" href="css/mycss_tablet.css" media="screen and (max-width: 800px)">
 
     <!-- Page Styles -->
     <style>
         .highlight {
             background-color: green;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
         }
 
         body {
@@ -30,80 +33,140 @@
             background-attachment: fixed;
             background-color: #106408;
         }
+
+        .navbar-custom {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
     </style>
 </head>
 
 <body>
-    <!-- Menu Section -->
-    <h1>Menu</h1>
-    <ul>
-        <li><a href="#profile">Profile Information</a></li>
-        <li><a href="#education">Education Summary</a></li>
-        <li><a href="#work">Work Experience</a></li>
-        <li><a href="#skills">Programming Skills</a></li>
-        <li><a href="#interests">General Interests</a></li>
-        <li><a href="#favorites">Favorite Media</a></li>
-        <li><a href="#websites">Favorite Websites</a></li>
-        <li><a href="#projects">My Projects</a></li>
-    </ul>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
+        <a class="navbar-brand" href="#">Julian's Profile</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#work">Work Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <!-- Profile Info -->
-    <h2 id="profile">Profile Information</h2>
-    <p>Name: Julian</p>
-    <img src="images/profile-pic.jpg" alt="Profile Picture" class="pfp">
-
-    <!-- Education -->
-    <h2 id="education">Education Summary</h2>
-    <ul>
-        <li><span class="highlight">Pursuing bachelor's Degree in Information Technology</span></li>
-        <li><span class="highlight">High School Diploma</span></li>
-    </ul>
-
-    <!-- Work Experience -->
-    <h2 id="work">Work Experience</h2>
-    <ul>
-        <li>Intern at KPMG Company</li>
-        <li>Developed a Java-based calorie tracker project</li>
-    </ul>
-
-    <!-- Programming Skills -->
-    <h2 id="skills">Programming Skills</h2>
-    <ul>
-        <li>HTML - Beginner</li>
-        <li>Java - Intermediate</li>
-    </ul>
-
-    <!-- Interests -->
-    <h2 id="interests">General Interests and Hobbies</h2>
-    <div class="highlight-hobbies">
-        <p style="color: rgb(33, 111, 33);">I enjoy creating art, exploring new places, and trying new things.</p>
+    <!-- Profile Section -->
+    <div class="container mt-5" id="profile">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="images/profile-pic.jpg" alt="Profile Picture" class="img-thumbnail">
+                <h2 class="mt-3">Julian</h2>
+            </div>
+            <div class="col-md-8">
+                <h3>About Me</h3>
+                <p>Hello! I am Julian, an Information Technology major. I enjoy creating art, exploring new places, and trying new things!</p>
+                <button class="btn btn-primary">Contact Me</button>
+            </div>
+        </div>
     </div>
 
-    <!-- Favorite Media -->
-    <h2 id="favorites">Favorite Media</h2>
-    <p>Favorite Song:</p>
-    <iframe width="50%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-        src="https://soundcloud.com/brentfaiyaz/all-mine-6?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"</iframe>
-    <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-        <a href="https://soundcloud.com/temsbaby" title="Tems" target="_blank" style="color: #cccccc; text-decoration: none;">Tems</a> ·
-        <a href="https://soundcloud.com/temsbaby/found-feat-brent-faiyaz" title="Found (feat. Brent Faiyaz)" target="_blank"
-            style="color: #cccccc; text-decoration: none;">Found (feat. Brent Faiyaz)</a>
+    <!-- Education Section -->
+    <div class="container mt-5" id="education">
+        <h3 class="text-center">Education Summary</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Bachelor's Degree</h5>
+                        <p class="card-text">Currently pursuing a Bachelor's Degree in Information Technology.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">High School Diploma</h5>
+                        <p class="card-text">Successfully graduated with a focus on technology and art.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <p>Favorite Show:</p>
-    <iframe width="420" height="200" src="<iframe width="876" height="493" src= "https://www.youtube.com/embed/i1eJMig5Ik4" title="BoJack Horseman | Official Trailer [HD] | Netflix" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+    <!-- Work Experience Section -->
+    <div class="container mt-5" id="work">
+        <h3 class="text-center">Work Experience</h3>
+        <ul class="list-group">
+            <li class="list-group-item">Intern at KPMG Company</li>
+            <li class="list-group-item">Developed a Java-based calorie tracker project</li>
+        </ul>
+    </div>
 
-    <p>Favorite Movie:</p>
-    <iframe width="420" height="200" src="<iframe width="876" height="493" src="https://www.youtube.com/embed/t06RUxPbp_c" title="SPIDER-MAN [2002] – Official Trailer (HD)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+    <!-- Skills Section -->
+    <div class="container mt-5" id="skills">
+        <h3 class="text-center">Programming Skills</h3>
+        <div class="progress mb-3">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">HTML - Beginner</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">Java - Intermediate</div>
+        </div>
+    </div>
+
+    <!-- Interests Section -->
+    <div class="container mt-5" id="interests">
+        <h3 class="text-center">Interests</h3>
+        <div class="alert alert-success" role="alert">
+            I enjoy creating art, exploring new places, and trying new things.
+        </div>
+    </div>
+
+    <!-- Favorite Media Section -->
+    <div class="container mt-5" id="favorites">
+        <h3 class="text-center">Favorite Media</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/favorite-song.jpg" class="card-img-top" alt="Favorite Song">
+                    <div class="card-body">
+                        <h5 class="card-title">Favorite Song</h5>
+                        <iframe width="100%" height="150" src="https://soundcloud.com/brentfaiyaz/all-mine-6?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/favorite-show.jpg" class="card-img-top" alt="Favorite Show">
+                    <div class="card-body">
+                        <h5 class="card-title">Favorite Show</h5>
+                        <iframe width="100%" height="150" src="https://www.youtube.com/embed/i1eJMig5Ik4" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/favorite-movie.jpg" class="card-img-top" alt="Favorite Movie">
+                    <div class="card-body">
+                        <h5 class="card-title">Favorite Movie</h5>
+                        <iframe width="100%" height="150" src="https://www.youtube.com/embed/t06RUxPbp_c" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap Scripts -->
-    <script src="jquery.min.js"></script>
-    <script src="popper.min.js"></script>
-    <script src="bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
